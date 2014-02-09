@@ -26,16 +26,14 @@ class Cli < Thor
     regex = /^\s*gem ['"]([-\w]+)['"](,.*)?/
     gems_hash = unfrozen_gems_hash
 
-    File.open(gemfile, 'w') {}
+    file = File.open(gemfile, 'w')
     File.open(GEMFILE_TMP) do |tmp|
       tmp.each do |line|
-        File.open(gemfile, 'a') do |file|
-          name = line.scan(regex).flatten.first
-          if !name.nil? && !gems_hash[name].nil?
-            line.chomp! << ", '#{gems_hash[name]}'\n"
-          end
-          file.write(line)
+        name = line.scan(regex).flatten.first
+        if !name.nil? && !gems_hash[name].nil?
+          line.chomp! << ", '#{gems_hash[name]}'\n"
         end
+        file.write(line)
       end
     end
   end
