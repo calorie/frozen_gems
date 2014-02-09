@@ -8,7 +8,7 @@ class Cli < Thor
 
   default_task :gems
 
-  desc "gems [GEMFILE_PATH]",
+  desc 'gems [GEMFILE_PATH]',
        "Write installed gems' versions to Gemfile"
   def gems(gemfile = 'Gemfile')
     gemfile = File.expand_path(gemfile)
