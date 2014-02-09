@@ -32,9 +32,9 @@ class Cli < Thor
         File.open(gemfile, 'a') do |file|
           name = line.scan(regex).flatten.first
           if !name.nil? && !gems_hash[name].nil?
-            l.chomp! << ", '#{gems_hash[name]}'\n"
+            line.chomp! << ", '#{gems_hash[name]}'\n"
           end
-          file.write(l)
+          file.write(line)
         end
       end
     end
