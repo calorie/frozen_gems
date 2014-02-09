@@ -1,9 +1,46 @@
 = frozen_gems
 
-Description goes here.
+Write installed gems' versions in a Gemfile.
+
+  source 'http://rubygems.org'
+
+  gem 'thor'
+
+  group :development do
+    gem 'rspec'
+    gem 'rdoc'
+    gem 'bundler'
+    gem 'jeweler'
+    gem 'simplecov'
+  end
+
+freeze gems:
+
+  source 'http://rubygems.org'
+
+  gem 'thor', '0.18.1'
+
+  group :development do
+    gem 'rspec', '2.8.0'
+    gem 'rdoc', '3.12.2'
+    gem 'bundler', '1.5.2'
+    gem 'jeweler', '2.0.1'
+    gem 'simplecov', '0.8.2'
+  end
+
+== Installation
+
+  $ git clone https://github.com/calorie/frozen_gems.git
+  $ cd frozen_gems
+  $ bundle install
+  $ rake install
+
+== Command
+
+  $ freeze
 
 == Contributing to frozen_gems
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
 * Fork the project.
