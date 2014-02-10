@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.authors = ["Yuu Shigetani"]
   s.date = "2014-02-10"
-  s.description = "write installed gems' versions to Gemfile"
+  s.description = "This gem write installed gems' versions to Gemfile"
   s.email = "s2g4t1n2@gmail.com"
   s.executables = ["freeze"]
   s.extra_rdoc_files = [
@@ -40,7 +40,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/calorie/frozen_gems"
   s.licenses = ["MIT"]
   s.rubygems_version = "2.2.1"
-  s.summary = "write installed gems' versions to Gemfile"
+  s.summary = "This gem write installed gems' versions to Gemfile"
 
   if s.respond_to? :specification_version then
     s.specification_version = 4

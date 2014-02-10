@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "frozen_gems"
   gem.homepage = "http://github.com/calorie/frozen_gems"
   gem.license = "MIT"
-  gem.summary = %Q{write installed gems' versions to Gemfile}
-  gem.description = %Q{write installed gems' versions to Gemfile}
+  gem.summary = %Q{This gem write installed gems' versions to Gemfile}
+  gem.description = %Q{This gem write installed gems' versions to Gemfile}
   gem.email = "s2g4t1n2@gmail.com"
   gem.authors = ["Yuu Shigetani"]
   # dependencies defined in Gemfile
