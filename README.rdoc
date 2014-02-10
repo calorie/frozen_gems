@@ -1,5 +1,7 @@
 = frozen_gems
 
+{<img src="https://badge.fury.io/rb/frozen_gems.png" alt="Gem Version" />}[http://badge.fury.io/rb/frozen_gems]
+
 Write installed gems' versions in a Gemfile.
 
   source 'http://rubygems.org'
