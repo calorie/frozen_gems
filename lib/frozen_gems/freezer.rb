@@ -53,4 +53,10 @@ class Freezer
     end
     gems.compact
   end
+
+  def get_tmpfile_path
+    Dir.chdir(File.dirname(@gemfile_path)) do
+      File.expand_path('Gemfile_for_frozen_gems')
+    end
+  end
 end

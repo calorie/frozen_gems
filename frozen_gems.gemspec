@@ -31,7 +31,6 @@ Gem::Specification.new do |s|
     "bin/freeze",
     "frozen_gems.gemspec",
     "lib/frozen_gems.rb",
-    "lib/frozen_gems/accesser.rb",
     "lib/frozen_gems/cli.rb",
     "lib/frozen_gems/freezer.rb",
     "spec/frozen_gems_spec.rb",
