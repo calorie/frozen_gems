@@ -32,6 +32,10 @@ freeze gems:
 
 == Installation
 
+  $ gem install frozen_gems
+
+or
+
   $ git clone https://github.com/calorie/frozen_gems.git
   $ cd frozen_gems
   $ bundle install
