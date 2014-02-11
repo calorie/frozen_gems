@@ -1,5 +1,4 @@
 require 'thor'
-require 'fileutils'
 
 class Cli < Thor
   include Thor::Actions
