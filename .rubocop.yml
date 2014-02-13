@@ -8,5 +8,3 @@ MethodLength:
   Max: 30
 Documentation:
   Enabled: false
-AccessorMethodName:
-  Enabled: false
