@@ -1,6 +1,7 @@
 require 'fileutils'
 
 class Freezer
+
   def initialize(gemfile_path)
     @gemfile_path = gemfile_path
     @tmpfile_path = tmpfile_path
@@ -17,7 +18,7 @@ class Freezer
     gemfile = File.open(@gemfile_path)
     tmpfile = File.open(@tmpfile_path, 'w')
     regex = /^\s*gem ['"]([-\w]+)['"](,.*)?/
-    gems_hash = unfrozen_gems_hash
+    gems_hash = Parser.new(@gemfile_path).unfrozen_gems_hash
 
     gemfile.each do |line|
       name = line.scan(regex).flatten.first
@@ -29,31 +30,6 @@ class Freezer
 
     gemfile.close
     tmpfile.close
-  end
-
-  def unfrozen_gems_hash
-    return {} unless gemfile?
-    hash = {}
-    gems = unfrozen_gems
-    regex = /(\w+(\-\w+)*)\s+\((\d+\.\d+\.\d+(\.\d+)*)\)/m
-    gems_info = Dir.chdir(File.dirname(@gemfile_path)) do
-      `bundle exec gem list`.scan(regex)
-    end
-    gems_info.each do |info|
-      info.compact!
-      name, version = info.first, info.last
-      hash[name] = version if gems.include?(name)
-    end
-    hash
-  end
-
-  def unfrozen_gems
-    return [] unless gemfile?
-    regex = /^\s*gem ['"]([-\w]+)['"](,.*)?/
-    gems = File.read(@gemfile_path).scan(regex).map do |g|
-      g.first if g.last.nil?
-    end
-    gems.compact
   end
 
   def tmpfile_path

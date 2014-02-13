@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Yuu Shigetani"]
-  s.date = "2014-02-10"
+  s.date = "2014-02-13"
   s.description = "This gem write installed gems' versions to Gemfile"
   s.email = "s2g4t1n2@gmail.com"
   s.executables = ["freeze"]
@@ -33,6 +33,7 @@ Gem::Specification.new do |s|
     "lib/frozen_gems.rb",
     "lib/frozen_gems/cli.rb",
     "lib/frozen_gems/freezer.rb",
+    "lib/frozen_gems/parser.rb",
     "spec/frozen_gems_spec.rb",
     "spec/spec_helper.rb"
   ]
