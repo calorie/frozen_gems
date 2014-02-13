@@ -7,7 +7,7 @@ class Cli < Thor
 
   desc 'gems [GEMFILE_PATH]',
        "Write installed gems' versions to Gemfile"
-  def gems(gemfile = 'Gemfile')
+  def gems(gemfile = GEMFILE)
     gemfile = File.expand_path(gemfile)
     abort "#{gemfile} is directory." if File.directory?(gemfile)
     Freezer.new(gemfile).overwrite_gemfile

@@ -1,7 +1,6 @@
 require 'fileutils'
 
 class Freezer
-
   def initialize(gemfile_path)
     @gemfile_path = gemfile_path
     @tmpfile_path = tmpfile_path
@@ -33,7 +32,7 @@ class Freezer
   end
 
   def tmpfile_path
-    File.join(File.dirname(@gemfile_path), 'Gemfile_for_frozen_gems')
+    File.join(File.dirname(@gemfile_path), TMPFILE)
   end
 
   def cp_gemfile
