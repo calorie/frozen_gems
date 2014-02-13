@@ -34,6 +34,7 @@ Gem::Specification.new do |s|
     "lib/frozen_gems/cli.rb",
     "lib/frozen_gems/freezer.rb",
     "lib/frozen_gems/parser.rb",
+    "lib/frozen_gems/validator.rb",
     "spec/frozen_gems_spec.rb",
     "spec/spec_helper.rb"
   ]

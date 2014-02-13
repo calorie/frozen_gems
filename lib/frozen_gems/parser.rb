@@ -27,10 +27,4 @@ class Parser
     end
     gems.compact
   end
-
-  private
-
-  def gemfile?
-    File.exist?(@gemfile_path)
-  end
 end

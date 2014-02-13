@@ -47,14 +47,4 @@ class Freezer
       FileUtils.mv(@tmpfile_path, @gemfile_path)
     end
   end
-
-  private
-
-  def gemfile?
-    File.exist?(@gemfile_path)
-  end
-
-  def tmpfile?
-    File.exist?(@tmpfile_path)
-  end
 end
