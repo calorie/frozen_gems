@@ -38,8 +38,8 @@ or
 
   $ git clone https://github.com/calorie/frozen_gems.git
   $ cd frozen_gems
-  $ bundle install
-  $ rake install
+  $ rake build
+  $ gem install pkg/frozen_gems-*.gem
 
 == Command
 
