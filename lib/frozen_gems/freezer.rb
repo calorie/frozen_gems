@@ -31,6 +31,8 @@ class Freezer
     tmpfile.close
   end
 
+  private
+
   def tmpfile_path
     File.join(File.dirname(@gemfile_path), TMPFILE)
   end
